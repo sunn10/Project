@@ -38,15 +38,16 @@ void setup() {
 	delay(30);
 }
 
-void switch_c (int num){
+void switch_c(int num){
 	int i = 0;
 	while (num < 6){
-		switch (num+1){
+		switch (num + 1){
 		case 0:
 			ave_data[0] = sensor[0].getdistance();
 
 			break;
 		case 1:
+		}
 	}
 }
 

@@ -5,7 +5,8 @@
 #include <algorithm>
 #include "Vibrator.h"
 using namespace std;
-void Vibrator::Vibrator(int p){
+
+Vibrator::Vibrator(int p){
 	pin=p;
 	duration = 0;
 	softPwmCreate (pin, 0,  pwmRange);

@@ -11,9 +11,10 @@ class Vibrator{
 private:
 	int pin;
 	int duration;
-	int pwmRange = 100;
+	int pwmRange;
 public:
-	void setDuration;
+	Vibrator(int p);
+	void setDuration(int dur);
 };
 
 #endif
