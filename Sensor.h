@@ -9,7 +9,6 @@
 using namespace std;
 
 class Sensor{
-	template <typename Iterator>
 	float precise;
 	int echo, trig;
 	double data[3];
@@ -17,6 +16,7 @@ public:
 	Sensor(int n_pin1,int n_pin2);
 	float getdistance(int trigger,int echo);
 private:
+	template <typename Iterator>
 	double median(Iterator begin, Iterator end);
 };
 

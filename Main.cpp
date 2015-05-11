@@ -19,20 +19,17 @@ using namespace std;
 
 int duration = 0;
 float ave_data[6];
-Sensor sensor[6];
-Switcher switcher;
-Vibrator Vibrator[3];
+//Sensor sensor[6];
+//Switcher switcher;
+//Vibrator Vibrator[3];
 
 void setup() {
 	wiringPiSetup();
-	pinMode(trigger, OUTPUT);
-	pinMode(echo, INPUT);
 	pinMode(TRIG2, OUTPUT);
 	pinMode(ECHO2, INPUT);
 	pinMode(VIB, OUTPUT);
 
 	printf("TRIG2 pin must start LOW\n");
-	digitalWrite(trigger, LOW);
 	digitalWrite(TRIG2, LOW);
 
 	delay(30);
@@ -44,9 +41,8 @@ void switch_c(int num){
 		switch (num + 1){
 		case 0:
 			ave_data[0] = sensor[0].getdistance();
-
 			break;
-		case 1:
+		default:break;
 		}
 	}
 }
