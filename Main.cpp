@@ -65,10 +65,8 @@ int main(void) {
 		duration = 500;
 		else if (precise <= 25)
 		duration = 700;
-		printf("%f,%f,%f\n", distance[0],distance[3],precise);
 	}
 	digitalWrite(VIB, LOW);
-	digitalWrite(trigger, LOW);
 	digitalWrite(TRIG2, LOW);
 	return 0;
 }
