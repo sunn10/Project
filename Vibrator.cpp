@@ -6,7 +6,10 @@
 #include <pthread.h>
 #include "Vibrator.h"
 using namespace std;
-
+void Vibrator::Vibrator(int pin){
+	duration =0;
+	softPwmCreate (pin, 0,  pwmRange);
+}
 void Vibrator::*vibrate(void *threadid){
 	long tid;
 	tid = (long)threadid;
@@ -17,4 +20,8 @@ void Vibrator::*vibrate(void *threadid){
 		delay(1000 - duration);
 	}
 	pthread_exit(NULL);
+}
+
+void setDuration(int dur){
+	duration = dur;
 }

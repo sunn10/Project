@@ -6,6 +6,7 @@
 #include <pthread.h>
 #include "Sensor.h"
 #include "Vibrator.h"
+#include "Switcher.h"
 using namespace std;
 
 #define TRUE 1
@@ -19,6 +20,9 @@ using namespace std;
 int duration = 0;
 float ave_data[6];
 Sensor sensor[6];
+Switcher switcher;
+Vibrator Vibrator[3];
+
 void setup() {
 	wiringPiSetup();
 	softPwmCreate(PWM, 0, 100);

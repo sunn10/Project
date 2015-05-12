@@ -14,10 +14,10 @@ class Sensor{
 	int pin1, pin2;
 	double data[3];
 public:
-	float getdistance(int,int){ return distance; }
-	void setpin(int,int);
+	float getdistance(int trigger,int echo);
+	void setpin(int n_pin1,int n_pin2);
 private:
-	double median(Iterator, Iterator){ return *middle; }
+	double median(Iterator begin, Iterator end);
 };
 
 #endif

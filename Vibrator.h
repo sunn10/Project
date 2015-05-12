@@ -9,9 +9,11 @@
 using namespace std;
 
 class Vibrator{
-	
+private:
+	int duration;
+	int pwmRange =100;
 public:
-	void *vibrate(void *int);
+	void setDuration;
 };
 
 #endif
