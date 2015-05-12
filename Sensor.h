@@ -13,7 +13,7 @@ public:
 	Sensor();
 	double getdistance(int trigger,int echo);
 	void printpin();
-	void setpin(int n_echo, int n_trig)
+	void setpin(int n_echo, int n_trig);
 private:
 	template <typename Iterator>
 	double median(Iterator begin, Iterator end);
