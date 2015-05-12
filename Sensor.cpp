@@ -8,8 +8,8 @@
 using namespace std;
 
 void Sensor::setpin(int n_echo, int n_trig){
-	echo = n_pin1;
-	trig = n_pin2;
+	echo = n_echo;
+	trig = n_trig;
 	pinMode(echo, OUTPUT);
 	pinMode(trig, INPUT);
 	digitalWrite(echo, LOW);
