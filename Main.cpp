@@ -51,7 +51,7 @@ void switch_c(int num){
 
 int main(void) {
 	//	printf("Start\n");
-	setup()
+	setup();
 	float distance[6];
 	double precise = 0;
 	double data = 0;
