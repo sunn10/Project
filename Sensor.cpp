@@ -12,12 +12,13 @@ Sensor::Sensor(int n_echo, int n_trig){
 	trig = n_pin2;
 	pinMode(echo, OUTPUT);
 	pinMode(trig, INPUT);
+	digitalWrite(echo, LOW);
 }
 
 double Sensor::getdistance(int trigger, int echo){
 	//	printf("Send TRIG2 pulse\n");
 	digitalWrite(trig, HIGH);
-	delayMicroseconds(20);
+	delayMicroseconds(10);
 	digitalWrite(trig, LOW);
 
 	//	printf("Wait for ECHO2 start\n");
