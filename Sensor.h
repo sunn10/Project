@@ -10,7 +10,7 @@ using namespace std;
 
 class Sensor{
 public:
-	Sensor();
+	Sensor(){};
 	double getdistance(int trigger,int echo);
 	void printpin();
 	void setpin(int n_echo, int n_trig);
