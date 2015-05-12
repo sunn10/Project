@@ -4,12 +4,11 @@
 using namespace std;
 
 #define TRUE 1
-#define TRIG1 0
-#define ECHO1 1
+#define TRIG1 4
+#define ECHO1 5
 #define TRIG2 4
 #define ECHO2 5
-#define PWM 6
-#define VIB 3
+#define VIB 6
 
 int duration = 0;
 //float ave_data[6];
@@ -49,9 +48,7 @@ int main(void) {
 //	double data = 0;
 	while (1){
 		delay(100);
-		
+		cout<<sensor.getdistance()<<endl;
 	}
-	digitalWrite(VIB, LOW);
-	digitalWrite(TRIG2, LOW);
 	return 0;
 }
