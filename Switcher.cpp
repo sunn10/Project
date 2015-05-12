@@ -11,7 +11,7 @@ Switcher::Switcher(int pin1, int pin2, int pin3){
 }
 
 void Switcher::switchpin(int num){
-	string binary = DecimalToBinaryString(num)
+	string binary = DecimalToBinaryString(num);
 	digitalWrite(c, (int)binary[0] - '0');
 	digitalWrite(b, (int)binary[1] - '0');
 	digitalWrite(a, (int)binary[2] - '0');
