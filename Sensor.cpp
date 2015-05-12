@@ -14,7 +14,7 @@ Sensor::Sensor(int n_echo, int n_trig){
 	pinMode(trig, INPUT);
 }
 
-double Sensor::getdistance(){
+double Sensor::getdistance(int trigger, int echo){
 	//	printf("Send TRIG2 pulse\n");
 	digitalWrite(trig, HIGH);
 	delayMicroseconds(20);
