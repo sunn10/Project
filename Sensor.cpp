@@ -68,5 +68,7 @@ double Sensor::median(Iterator begin, Iterator end) {
 	}
 }
 
-
+void Sensor::printpin(){
+	printf("%d&d",echo,trig);
+}
 

@@ -26,6 +26,7 @@ Vibrator vibrator;
 void setup() {
 	wiringPiSetup();
 	sensor = Sensor(TRIG1,ECHO1);
+	sensor.printpin();
 	vibrator = Vibrator(VIB); 
 	printf("TRIG2 pin must start LOW\n");
 	digitalWrite(TRIG2, LOW);
