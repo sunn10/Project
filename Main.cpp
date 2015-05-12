@@ -25,13 +25,10 @@ float ave_data[6];
 
 void setup() {
 	wiringPiSetup();
-<<<<<<< HEAD
-	pinMode(trigger, OUTPUT);
-=======
 	pinMode(TRIG2, OUTPUT);
 	pinMode(ECHO2, INPUT);
 	pinMode(VIB, OUTPUT);
->>>>>>> 83326c5a39cd69e3d43b06dd52bd5e8f08534c94
+
 
 	printf("TRIG2 pin must start LOW\n");
 	digitalWrite(TRIG2, LOW);
@@ -40,33 +37,21 @@ void setup() {
 }
 
 void switch_c(int num){
-	int i = 0;
 	while (num < 6){
-<<<<<<< HEAD
 		switch (num){
-=======
-		switch (num + 1){
->>>>>>> origin/master
 		case 0:
-			ave_data[0] = sensor[0].getdistance();
+//			ave_data[0] = sensor[0].getdistance();
 			break;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 		default:
 			break;
-=======
-		case 1:
-=======
-		default:break;
->>>>>>> 83326c5a39cd69e3d43b06dd52bd5e8f08534c94
 		}
->>>>>>> origin/master
 	}
 }
 
 int main(void) {
 	//	printf("Start\n");
-	setup();
+	setup()
 	float distance[6];
 	double precise = 0;
 	double data = 0;
@@ -85,6 +70,5 @@ int main(void) {
 	digitalWrite(VIB, LOW);
 	digitalWrite(trigger, LOW);
 	digitalWrite(TRIG2, LOW);
-	pthread_exit(NULL);
 	return 0;
 }
