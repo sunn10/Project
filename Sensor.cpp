@@ -1,15 +1,15 @@
 #include "Sensor.h"
 using namespace std;
 
-void Sensor::setpin(int n_echo, int n_trig){
+void Sensor::setpin(int n_trig, int n_echo){
 	echo = n_echo;
 	trig = n_trig;
-	pinMode(echo, OUTPUT);
-	pinMode(trig, INPUT);
-	digitalWrite(echo, LOW);
+	pinMode(echo, INPUT);
+	pinMode(trig, OUTPUT);
+	digitalWrite(trig, LOW);
 }
 
-double Sensor::getdistance(int trigger, int echo){
+double Sensor::getdistance(){
 	//	printf("Send TRIG2 pulse\n");
 	digitalWrite(trig, HIGH);
 	delayMicroseconds(10);

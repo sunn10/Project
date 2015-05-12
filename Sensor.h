@@ -11,7 +11,7 @@ using namespace std;
 class Sensor{
 public:
 	Sensor(){};
-	double getdistance(int trigger,int echo);
+	double getdistance();
 	void printpin();
 	void setpin(int n_echo, int n_trig);
 private:
