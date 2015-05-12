@@ -7,7 +7,7 @@
 #include "Sensor.h"
 using namespace std;
 
-Sensor::Sensor(int n_echo, int n_trig){
+void Sensor::setpin(int n_echo, int n_trig){
 	echo = n_pin1;
 	trig = n_pin2;
 	pinMode(echo, OUTPUT);

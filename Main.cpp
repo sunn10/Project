@@ -21,13 +21,13 @@ int duration = 0;
 float ave_data[6];
 Sensor sensor;
 //Switcher switcher;
-Vibrator vibrator;
+//Vibrator vibrator;
 
 void setup() {
 	wiringPiSetup();
-	sensor = Sensor(TRIG1,ECHO1);
+	sensor.setpin(TRIG1,ECHO1);
 	sensor.printpin();
-	vibrator = Vibrator(VIB); 
+//	vibrator = Vibrator(VIB); 
 	printf("TRIG2 pin must start LOW\n");
 	digitalWrite(TRIG2, LOW);
 

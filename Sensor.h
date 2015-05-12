@@ -13,9 +13,10 @@ class Sensor{
 	int echo, trig;
 	double data[3];
 public:
-	Sensor(int n_pin1 = 0,int n_pin2 = 0);
+	Sensor();
 	double getdistance(int trigger,int echo);
 	void printpin();
+	void setpin(int n_echo, int n_trig)
 private:
 	template <typename Iterator>
 	double median(Iterator begin, Iterator end);
