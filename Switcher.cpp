@@ -1,11 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <wiringPi.h>
-#include <softPwm.h>
-#include <bitset>
-#include <algorithm>
-#include <pthread.h>
-#include <String>
 #include "Switcher.h"
 using namespace std;
 

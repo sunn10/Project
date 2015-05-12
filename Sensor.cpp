@@ -1,9 +1,4 @@
-#include <iostream>
-#include <stdlib.h>
-#include <wiringPi.h>
-#include <softPwm.h>
-#include <algorithm>
-#include <pthread.h>
+
 #include "Sensor.h"
 using namespace std;
 

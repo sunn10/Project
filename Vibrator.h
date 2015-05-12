@@ -1,6 +1,6 @@
 #ifndef VIBRATOR_H
 #define VIBRATOR_H
-#include <stdio.h>
+#include <iostream>
 #include <stdlib.h>
 #include <wiringPi.h>
 #include <softPwm.h>

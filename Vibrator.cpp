@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <wiringPi.h>
-#include <softPwm.h>
-#include <algorithm>
 #include "Vibrator.h"
 using namespace std;
 
