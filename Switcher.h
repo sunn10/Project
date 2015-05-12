@@ -14,7 +14,7 @@ public:
 	Switcher(int pin1, int pin2, int pin3);
 	void switchpin(int num);
 private:
-	string DecimalToBinaryString(int a)
+	string DecimalToBinaryString(int a);
 	int a, b, c;
 };
 
