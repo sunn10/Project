@@ -22,7 +22,7 @@ void setup() {
 	sensor.setpin(TRIG1,ECHO1);
 	sensor.printpin();
 //	vibrator = Vibrator(VIB); 
-	printf("TRIG2 pin must start LOW\n");
+	cout<<"TRIG2 pin must start LOW\n";
 	digitalWrite(TRIG2, LOW);
 
 	delay(30);
