@@ -26,10 +26,6 @@ Vibrator Vibrator[3];
 void setup() {
 	wiringPiSetup();
 	pinMode(trigger, OUTPUT);
-	pinMode(echo, INPUT);
-	pinMode(TRIG2, OUTPUT);
-	pinMode(ECHO2, INPUT);
-	pinMode(VIB, OUTPUT);
 
 	printf("TRIG2 pin must start LOW\n");
 	digitalWrite(trigger, LOW);
@@ -41,26 +37,23 @@ void setup() {
 void switch_c (int num){
 	int i = 0;
 	while (num < 6){
-		switch (num+1){
+		switch (num){
 		case 0:
 			ave_data[0] = sensor[0].getdistance();
-
 			break;
-		case 1:
+		default:
+			break;
 	}
 }
 
 int main(void) {
 	//	printf("Start\n");
 	setup();
-	pthread_t threads;
-	pthread_create(&threads, NULL, vibrate, (void *)1);
 	float distance[6];
 	double precise = 0;
 	double data = 0;
 	while (1){
 		delay(100);
-		precise = median(distance + 0, distance + sizeof(distance) / sizeof(distance[0]));
 		if (precise <= 150 && precise > 100)
 		duration = 100;
 		else if (precise <= 100 && precise > 50)
