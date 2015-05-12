@@ -1,6 +1,6 @@
 #ifndef SWITCHER_H
 #define SWITCHER_H
-#include <stdio.h>
+#include <iostream>
 #include <stdlib.h>
 #include <wiringPi.h>
 #include <softPwm.h>

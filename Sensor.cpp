@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <iostream>
 #include <stdlib.h>
 #include <wiringPi.h>
 #include <softPwm.h>
@@ -69,6 +69,6 @@ double Sensor::median(Iterator begin, Iterator end) {
 }
 
 void Sensor::printpin(){
-	printf("%d,&d\n",echo,trig);
+	cout<<echo<<","<<trig<<endl;
 }
 
