@@ -9,6 +9,7 @@
 using namespace std;
 
 class Sensor{
+	template <typename Iterator>
 	float precise;
 	int echo, trig;
 	double data[3];

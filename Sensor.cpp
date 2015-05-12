@@ -7,6 +7,13 @@
 #include "Sensor.h"
 using namespace std;
 
+Sensor::Sensor(int n_echo, int n_trig){
+	echo = n_pin1;
+	trig = n_pin2;
+	pinMode(echo, OUTPUT);
+	pinMode(trig, INPUT);
+}
+
 double Sensor::getdistance(){
 	//	printf("Send TRIG2 pulse\n");
 	digitalWrite(trig, HIGH);
@@ -60,10 +67,5 @@ double Sensor::median(Iterator begin, Iterator end) {
 	}
 }
 
-Sensor::Sensor(int n_echo,int n_trig){
-	echo = n_pin1;
-	trig = n_pin2;
-	pinMode(echo, OUTPUT);
-	pinMode(trig, INPUT);
-}
+
 
