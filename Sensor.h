@@ -9,13 +9,12 @@
 using namespace std;
 
 class Sensor{
-	float distance[3];
 	float precise;
-	int pin1, pin2;
+	int echo, trig;
 	double data[3];
 public:
+	Sensor(int n_pin1,int n_pin2);
 	float getdistance(int trigger,int echo);
-	void setpin(int n_pin1,int n_pin2);
 private:
 	double median(Iterator begin, Iterator end);
 };

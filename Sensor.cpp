@@ -7,11 +7,11 @@
 #include "Sensor.h"
 using namespace std;
 
-float Sensor::getdistance(int trigger,int echo){
+double Sensor::getdistance(){
 	//	printf("Send TRIG2 pulse\n");
-	digitalWrite(trigger, HIGH);
+	digitalWrite(trig, HIGH);
 	delayMicroseconds(20);
-	digitalWrite(trigger, LOW);
+	digitalWrite(trig, LOW);
 
 	//	printf("Wait for ECHO2 start\n");
 	while (digitalRead(echo) == LOW);
@@ -29,7 +29,7 @@ float Sensor::getdistance(int trigger,int echo){
 	travelTime = micros() - startTime;
 	//printf("travelTime = %d\n",travelTime);
 	//printf("Get distance in cm\n");
-	float distance = travelTime / 58.0;
+	double distance = travelTime / 58.0;
 	
 	data[2] = data[1];
 	data[1] = data[0];
@@ -60,8 +60,10 @@ double Sensor::median(Iterator begin, Iterator end) {
 	}
 }
 
-void Sensor::setpin(int n_pin1,int n_pin2){
-	pin1 = n_pin1;
-	pin2 = n_pin2;
+Sensor::Sensor(int n_echo,int n_trig){
+	echo = n_pin1;
+	trig = n_pin2;
+	pinMode(echo, OUTPUT);
+	pinMode(trig, INPUT);
 }
 

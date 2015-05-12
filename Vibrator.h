@@ -5,13 +5,13 @@
 #include <wiringPi.h>
 #include <softPwm.h>
 #include <algorithm>
-#include <pthread.h>
 using namespace std;
 
 class Vibrator{
 private:
+	int pin;
 	int duration;
-	int pwmRange =100;
+	int pwmRange = 100;
 public:
 	void setDuration;
 };

@@ -8,7 +8,7 @@
 #include "Switcher.h"
 using namespace std;
 
-void Switcher::savepin(int pin1, int pin2, int pin3){
+Switcher::Switcher(int pin1, int pin2, int pin3){
 	a = pin1;
 	b = pin2;
 	c = pin3;

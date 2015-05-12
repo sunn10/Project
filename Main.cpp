@@ -25,7 +25,6 @@ Vibrator Vibrator[3];
 
 void setup() {
 	wiringPiSetup();
-	softPwmCreate(PWM, 0, 100);
 	pinMode(trigger, OUTPUT);
 	pinMode(echo, INPUT);
 	pinMode(TRIG2, OUTPUT);

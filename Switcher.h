@@ -10,8 +10,7 @@ using namespace std;
 
 class Switcher{
 	int a, b, c;
-public:
-	void switchpin(int pin1, int pin2, int pin3);
+public:Switcher(int pin1, int pin2, int pin3)
 	void switchpin(int pin);
 };
 
