@@ -18,7 +18,7 @@ using namespace std;
 #define VIB 3
 
 int duration = 0;
-float ave_data[6];
+//float ave_data[6];
 Sensor sensor;
 //Switcher switcher;
 //Vibrator vibrator;
@@ -50,9 +50,9 @@ void switch_c(int num){
 int main(void) {
 	//	printf("Start\n");
 	setup();
-	float distance[6];
-	double precise = 0;
-	double data = 0;
+//	float distance[6];
+//	double precise = 0;
+//	double data = 0;
 	while (1){
 		delay(100);
 		
