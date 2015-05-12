@@ -13,7 +13,7 @@ class Sensor{
 	int echo, trig;
 	double data[3];
 public:
-	Sensor(int n_pin1,int n_pin2);
+	Sensor(int n_pin1 = 0,int n_pin2 = 0);
 	double getdistance(int trigger,int echo);
 private:
 	template <typename Iterator>
