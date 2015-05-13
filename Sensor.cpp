@@ -38,7 +38,7 @@ double Sensor::getdistance(){
 	data1 = distance;
 
 //	precise = median(data + 0, data + sizeof(data) / sizeof(data[0]));
-	precise = median(data1,data2,data3)
+	precise = median(data1,data2,data3);
 	return precise;
 }
 
