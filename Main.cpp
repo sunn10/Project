@@ -4,8 +4,8 @@
 using namespace std;
 
 #define TRUE 1
-#define TRIG1 4
-#define ECHO1 5
+#define TRIG1 2
+#define ECHO1 3
 #define TRIG2 4
 #define ECHO2 5
 #define VIB 6

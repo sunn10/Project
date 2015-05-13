@@ -17,9 +17,14 @@ public:
 private:
 	template <typename Iterator>
 	double median(Iterator begin, Iterator end);
+	int find_max(double i1,double i2,double i3);
+	int find_min(double i1,double i2,double i3);
+	double median(double i1,double i2,double i3);
 	float precise;
 	int echo, trig;
-	double data[3];
+	double data1;
+	double data2;
+	double data3;
 };
 
 #endif
