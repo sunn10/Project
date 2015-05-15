@@ -22,12 +22,12 @@ void setup() {
 	pinMode(ECHO1, INPUT);
 	pinMode(TRIG1, OUTPUT);
 	digitalWrite(TRIG1, LOW);
-	sensor[0].setpin(TRIG1,ECHO1);
-	sensor[1].setpin(TRIG1,ECHO1);
+//	sensor[0].setpin(TRIG1,ECHO1);
+//	sensor[1].setpin(TRIG1,ECHO1);
 	sensor[2].setpin(TRIG1,ECHO1);
-	sensor[3].setpin(TRIG1,ECHO1);
-	sensor[4].setpin(TRIG1,ECHO1);
-	sensor[5].setpin(TRIG1,ECHO1);
+//	sensor[3].setpin(TRIG1,ECHO1);
+//	sensor[4].setpin(TRIG1,ECHO1);
+//	sensor[5].setpin(TRIG1,ECHO1);
 
 	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
@@ -63,10 +63,11 @@ int main(void) {
 //		delay(100);
 //		digitalWrite(TRIG1, LOW);
 		delay(100);
-		for(int i=2;i<4;i++){
-			switcher.switchpin(i);
-			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
-		}
+//		for(int i=2;i<4;i++){
+//			switcher.switchpin(i);
+//			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
+//		}
+		cout<<2<<"-"<<sensor[2].getdistance()<<endl;
 //		if (precise <= 150 && precise > 100)
 //			vibrator[0].setDuration(100);
 //		else if (precise <= 100 && precise > 50)
