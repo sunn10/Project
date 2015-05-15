@@ -29,7 +29,7 @@ void setup() {
 	sensor[1].setpin(TRIG1,ECHO1);
 	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
-	switcher.switchpin(0);
+	switcher.switchpin(2);
 //	sensor[0].printpin();
 //	vibrator = Vibrator(VIB); 
 //	digitalWrite(TRIG1, LOW);
@@ -58,7 +58,7 @@ int main(void) {
 //	double data = 0;
 	while (1){
 		delay(50);
-		for(int i=0;i<2;i++){
+		for(int i=2;i<5;i++){
 			switcher.switchpin(i);
 			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
 		}
