@@ -57,8 +57,8 @@ int main(void) {
 	while (1){
 		delay(50);
 //		for(int i=1;i<4;i++){
-			switcher.switchpin(2);
-			cout<<2<<"-"<<sensor[2].getdistance()<<endl;
+			switcher.switchpin(3);
+			cout<<3<<"-"<<sensor[3].getdistance()<<endl;
 //		}
 //		if (precise <= 150 && precise > 100)
 //			vibrator[0].setDuration(100);
