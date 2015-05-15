@@ -59,15 +59,16 @@ int main(void) {
 //	double precise = 0;
 //	double data = 0;
 	while (1){
-//		digitalWrite(TRIG1, HIGH);
+		digitalWrite(TRIG1, HIGH);
 //		delay(100);
 //		digitalWrite(TRIG1, LOW);
 		
-		for(int i=0;i<2;i++){
+		for(int i=0;i<6;i++){
 			switcher.switchpin(i);
-			delay(100);
-			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
-			delay(100);
+			delay(1000);
+//			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
+
+//			delay(100);
 		}
 //		cout<<2<<"-"<<sensor[2].getdistance()<<endl;
 //		if (precise <= 150 && precise > 100)
