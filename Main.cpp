@@ -55,14 +55,14 @@ int main(void) {
 //	double precise = 0;
 //	double data = 0;
 	while (1){
-		digitalWrite(TRIG1, HIGH);
+//		digitalWrite(TRIG1, HIGH);
+//		delay(100);
+//		digitalWrite(TRIG1, LOW);
 		delay(100);
-		digitalWrite(TRIG1, LOW);
-		delay(100);
-//		for(int i=5;i<6;i++){
-//			switcher.switchpin(i);
-//			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
-//		}
+		for(int i=5;i<6;i++){
+			switcher.switchpin(i);
+			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
+		}
 //		if (precise <= 150 && precise > 100)
 //			vibrator[0].setDuration(100);
 //		else if (precise <= 100 && precise > 50)
