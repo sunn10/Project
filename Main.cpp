@@ -27,7 +27,7 @@ void setup() {
 	sensor[3].setpin(TRIG1,ECHO1);
 	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
-	switcher.switchpin(2);
+	switcher.switchpin(5);
 //	sensor[0].printpin();
 //	vibrator = Vibrator(VIB); 
 //	digitalWrite(TRIG1, LOW);
