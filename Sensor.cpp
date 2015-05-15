@@ -12,7 +12,7 @@ void Sensor::setpin(int n_trig, int n_echo){
 double Sensor::getdistance(){
 	//	printf("Send TRIG2 pulse\n");
 	digitalWrite(trig, HIGH);
-	delayMicroseconds(10);
+	delayMicroseconds(20);
 	digitalWrite(trig, LOW);
 
 	//	printf("Wait for ECHO2 start\n");
