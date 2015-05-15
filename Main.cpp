@@ -21,7 +21,12 @@ Vibrator vibrator[3];
 
 void setup() {
 	wiringPiSetup();
+	pinMode(ECHO1, INPUT);
+	pinMode(TRIG1, OUTPUT);
+	digitalWrite(TRIG1, LOW);
+	
 	sensor[0].setpin(TRIG1,ECHO1);
+	sensor[1].setpin(TRIG1,ECHO1);
 	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
 	switcher.switchpin(0);
@@ -53,16 +58,18 @@ int main(void) {
 //	double data = 0;
 	while (1){
 		delay(10);
-		precise = sensor[0].getdistance();
-		cout<<precise<<endl;
-		if (precise <= 150 && precise > 100)
-			vibrator[0].setDuration(100);
-		else if (precise <= 100 && precise > 50)
-			vibrator[0].setDuration(200);
-		else if (precise <= 50 && precise > 25)
-			vibrator[0].setDuration(500);
-		else if (precise <= 25)
-			vibrator[0].setDuration(700); 
+		for(int i=0;i<1;i++){			
+			switcher.switchpin(i);
+			cout<<sensor[i].getdistance()<<endl;
+		}
+//		if (precise <= 150 && precise > 100)
+//			vibrator[0].setDuration(100);
+//		else if (precise <= 100 && precise > 50)
+//			vibrator[0].setDuration(200);
+//		else if (precise <= 50 && precise > 25)
+//			vibrator[0].setDuration(500);
+//		else if (precise <= 25)
+//			vibrator[0].setDuration(700); 
 	}
 	return 0;
 }
