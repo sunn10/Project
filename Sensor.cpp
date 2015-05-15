@@ -20,9 +20,9 @@ double Sensor::getdistance(){
 //	cout<<"starttime ="<<startTime;
 	int travelTime = 0;
 	while (digitalRead(echo) == HIGH){
-		if ((micros() - startTime)>23000){
-			break;
-		}
+//		if ((micros() - startTime)>23000){
+//			break;
+//		}
 	}
 
 	travelTime = micros() - startTime;
