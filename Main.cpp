@@ -6,8 +6,6 @@ using namespace std;
 #define TRUE 1
 #define TRIG1 2
 #define ECHO1 3
-#define TRIG2 
-#define ECHO2 
 #define VIB 7
 #define A 4
 #define B 5
@@ -25,8 +23,8 @@ void setup() {
 	pinMode(TRIG1, OUTPUT);
 	digitalWrite(TRIG1, LOW);
 	
-	sensor[0].setpin(TRIG1,ECHO1);
-	sensor[1].setpin(TRIG1,ECHO1);
+	sensor[2].setpin(TRIG1,ECHO1);
+	sensor[3].setpin(TRIG1,ECHO1);
 	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
 	switcher.switchpin(2);
@@ -58,7 +56,7 @@ int main(void) {
 //	double data = 0;
 	while (1){
 		delay(50);
-		for(int i=2;i<5;i++){
+		for(int i=2;i<4;i++){
 			switcher.switchpin(i);
 			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
 		}
