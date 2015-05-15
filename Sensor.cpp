@@ -26,7 +26,7 @@ double Sensor::getdistance(){
 	while (digitalRead(echo) == HIGH){
 //		if ((micros() - startTime)>23000){
 //			break;
-		}
+//		}
 	}
 
 	travelTime = micros() - startTime;
