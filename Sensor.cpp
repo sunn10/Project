@@ -11,7 +11,7 @@ double Sensor::getdistance(){
 	digitalWrite(trig, HIGH);
 	delayMicroseconds(20);
 	digitalWrite(trig, LOW);
-
+	int startTime = micros();
 	cout<<"Wait for ECHO2 start\n";
 	while (digitalRead(echo) == LOW){
 		if ((micros() - startTime)>2300){
@@ -25,7 +25,7 @@ double Sensor::getdistance(){
 	}
 
 //	cout<<"Wait for ECHO2 end\n";
-	int startTime = micros();	
+	startTime = micros();	
 //	cout<<"starttime ="<<startTime;
 	int travelTime = 0;
 	while (digitalRead(echo) == HIGH){
