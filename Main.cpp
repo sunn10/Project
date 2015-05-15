@@ -65,9 +65,9 @@ int main(void) {
 		
 		for(int i=2;i<4;i++){
 			switcher.switchpin(i);
-			delay(50);
+			delay(100);
 			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
-			delay(50);
+			delay(100);
 		}
 //		cout<<2<<"-"<<sensor[2].getdistance()<<endl;
 //		if (precise <= 150 && precise > 100)
