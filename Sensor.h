@@ -12,15 +12,15 @@ class Sensor{
 public:
 	Sensor(){};
 	double getdistance();
+	float precise;
 	void printpin();
 	void setpin(int n_echo, int n_trig);
-private:
+protected:
 	template <typename Iterator>
 	double median(Iterator begin, Iterator end);
 	int find_max(double i1,double i2,double i3);
 	int find_min(double i1,double i2,double i3);
 	double median(double i1,double i2,double i3);
-	float precise;
 	int echo, trig;
 	double data1;
 	double data2;
