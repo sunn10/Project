@@ -13,16 +13,25 @@ double Sensor::getdistance(){
 	digitalWrite(trig, LOW);
 
 	cout<<"Wait for ECHO2 start\n";
-	while (digitalRead(echo) == LOW);
+	while (digitalRead(echo) == LOW){
+		if ((micros() - startTime)>2300){
+			digitalWrite(trig, HIGH);
+			delayMicroseconds(20);
+			digitalWrite(trig, LOW);
+		}
+		if ((micros() - startTime)>23000){
+			break;
+		}
+	}
 
 //	cout<<"Wait for ECHO2 end\n";
 	int startTime = micros();	
 //	cout<<"starttime ="<<startTime;
 	int travelTime = 0;
 	while (digitalRead(echo) == HIGH){
-//		if ((micros() - startTime)>23000){
-//			break;
-//		}
+		if ((micros() - startTime)>23000){
+			break;
+		}
 	}
 
 	travelTime = micros() - startTime;
