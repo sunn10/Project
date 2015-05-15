@@ -54,7 +54,7 @@ int main(void) {
 	//	printf("Start\n");
 	setup();
 //	float distance[6];
-	double precise = 0;
+//	double precise = 0;
 //	double data = 0;
 	while (1){
 		delay(50);
