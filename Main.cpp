@@ -22,9 +22,12 @@ void setup() {
 	pinMode(ECHO1, INPUT);
 	pinMode(TRIG1, OUTPUT);
 	digitalWrite(TRIG1, LOW);
-	for(int i=0;i<6;i++){
-		sensor[i].setpin(TRIG1,ECHO1);
-	}
+	sensor[0].setpin(TRIG1,ECHO1);
+	sensor[1].setpin(TRIG1,ECHO1);
+	sensor[2].setpin(TRIG1,ECHO1);
+	sensor[3].setpin(TRIG1,ECHO1);
+	sensor[4].setpin(TRIG1,ECHO1);
+	sensor[5].setpin(TRIG1,ECHO1);
 
 	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
