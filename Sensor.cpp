@@ -10,17 +10,17 @@ void Sensor::setpin(int n_trig, int n_echo){
 }
 
 double Sensor::getdistance(){
-	//	printf("Send TRIG2 pulse\n");
+	cout<<"Send TRIG2 pulse\n";
 	digitalWrite(trig, HIGH);
 	delayMicroseconds(20);
 	digitalWrite(trig, LOW);
 
-	//	printf("Wait for ECHO2 start\n");
+	cout<<"Wait for ECHO2 start\n";
 	while (digitalRead(echo) == LOW);
 
-	//	printf("Wait for ECHO2 end\n");
+	cout<<"Wait for ECHO2 end\n";
 	int startTime = micros();
-	//printf("starttime = %d\n",startTime);
+	cout<<"starttime ="<<startTime;
 	int travelTime = 0;
 	while (digitalRead(echo) == HIGH){
 		if ((micros() - startTime)>23000){

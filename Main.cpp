@@ -27,7 +27,6 @@ void setup() {
 	switcher.switchpin(0);
 //	sensor[0].printpin();
 //	vibrator = Vibrator(VIB); 
-	cout<<"TRIG2 pin must start LOW\n";
 //	digitalWrite(TRIG1, LOW);
 
 	delay(10);
