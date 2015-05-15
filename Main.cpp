@@ -48,7 +48,7 @@ int main(void) {
 	double precise = 0;
 //	double data = 0;
 	while (1){
-		delay(100);
+		delay(10);
 		precise = sensor[0].getdistance();
 		cout<<precise<<endl;
 		if (precise <= 150 && precise > 100)
