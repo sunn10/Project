@@ -6,9 +6,12 @@ using namespace std;
 #define TRUE 1
 #define TRIG1 2
 #define ECHO1 3
-#define TRIG2 4
-#define ECHO2 5
-#define VIB 6
+#define TRIG2 
+#define ECHO2 
+#define VIB 7
+#define A 4
+#define B 5
+#define C 6
 
 int duration = 0;
 //float ave_data[6];
@@ -20,6 +23,8 @@ void setup() {
 	wiringPiSetup();
 	sensor[0].setpin(TRIG1,ECHO1);
 	vibrator[0].setpin(VIB);
+	switcher.setpin(A,B,C);
+	switcher.switchpin(0);
 //	sensor[0].printpin();
 //	vibrator = Vibrator(VIB); 
 	cout<<"TRIG2 pin must start LOW\n";
