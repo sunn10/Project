@@ -16,7 +16,7 @@ double Sensor::getdistance(){
 	while (digitalRead(echo) == LOW);
 
 	cout<<"Wait for ECHO2 end\n";
-//	int startTime = micros();
+	int startTime = micros();
 //	cout<<"starttime ="<<startTime;
 	int travelTime = 0;
 	while (digitalRead(echo) == HIGH){
