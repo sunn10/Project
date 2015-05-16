@@ -23,8 +23,7 @@ void setup() {
 	pinMode(ECHO1, INPUT);
 	pinMode(TRIG1, OUTPUT);
 	digitalWrite(TRIG1, LOW);
-	sensor = new Sensor[5];
-	sensor[5] = new Calibrate;
+	sensor = new Sensor[6];
 	for(int i=0;i<6;i++){
 		sensor[i].setpin(TRIG1,ECHO1);
 	}
@@ -47,7 +46,7 @@ int main(void) {
 	while (1){
 
 		
-		for(int i=0;i<5;i++){
+		for(int i=0;i<6;i++){
 			switcher.switchpin(i);
 			delay(5);
 			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
