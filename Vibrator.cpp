@@ -5,7 +5,8 @@ void Vibrator::setpin(int p){
 	pin=p;
 	duration = 0;
 	pwmRange=1000;
-	softPwmCreate (pin, 0,  pwmRange);
+	softPwmCreate (pin, duration,  pwmRange);
+	softPwmWrite (pin, duration) ;
 }
 
 void Vibrator::setDuration(int dur){

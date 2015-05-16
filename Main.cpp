@@ -60,7 +60,7 @@ int main(void) {
 			delay(5);
 			if(i<5){
 				precise = sensor[i].getdistance();
-				cout<<i<<"-"<<endl;
+				cout<<i<<"-"<<precise<<endl;
 				if(i==0){
 					if (precise <= 150 && precise > 100)
 						vibrator[0].setDuration(100);
