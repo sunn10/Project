@@ -13,7 +13,7 @@ using namespace std;
 
 int duration = 0;
 //float ave_data[6];
-Sensor *sensor[6];
+Sensor *sensor;
 Switcher switcher;
 Vibrator vibrator[3];
 
@@ -22,7 +22,7 @@ void setup() {
 	pinMode(ECHO1, INPUT);
 	pinMode(TRIG1, OUTPUT);
 	digitalWrite(TRIG1, LOW);
-	sensor = new Sensor[6];
+	sensor = new Sensor[6]{{},{},{},{},{},};
 	for(int i=0;i<6;i++){
 		sensor[i]->setpin(TRIG1,ECHO1);
 	}
