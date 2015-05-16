@@ -66,8 +66,9 @@ int main(void) {
 //		else if (precise <= 25)
 //			vibrator[0].setDuration(700); 
 	}
-
-		delete sensor;
-
+		for(int i=0;i<6;i++){
+		delete sensor[i];
+	
+	}
 	return 0;
 }
