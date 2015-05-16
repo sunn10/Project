@@ -22,7 +22,7 @@ void setup() {
 	pinMode(ECHO1, INPUT);
 	pinMode(TRIG1, OUTPUT);
 	digitalWrite(TRIG1, LOW);
-	sensor = new Sensor[6]{{},{},{},{},{},};
+	sensor = new Sensor[6];
 	for(int i=0;i<6;i++){
 		sensor[i]->setpin(TRIG1,ECHO1);
 	}
