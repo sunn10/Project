@@ -12,17 +12,17 @@ using namespace std;
 
 int duration = 0;
 //float ave_data[6];
-Sensor sensor;
+Sensor sensor[6];
 //Switcher switcher;
 //Vibrator vibrator;
 
 void setup() {
 	wiringPiSetup();
-	sensor.setpin(TRIG1,ECHO1);
-	sensor.printpin();
+	sensor[0].setpin(TRIG1,ECHO1);
+//	sensor[0].printpin();
 //	vibrator = Vibrator(VIB); 
 	cout<<"TRIG2 pin must start LOW\n";
-	digitalWrite(TRIG1, LOW);
+//	digitalWrite(TRIG1, LOW);
 
 	delay(30);
 }
@@ -48,7 +48,15 @@ int main(void) {
 //	double data = 0;
 	while (1){
 		delay(100);
-		cout<<sensor.getdistance()<<endl;
+		cout<<sensor[0].getdistance()<<endl;
+		if (precise <= 150 && precise > 100)
+			vibrator.duration = 100;
+		else if (precise <= 100 && precise > 50)
+			vibrator.duration = 200;
+		else if (precise <= 50 && precise > 25)
+			vibrator.duration = 500;
+		else if (precise <= 25)
+			vibrator.duration = 700; 
 	}
 	return 0;
 }

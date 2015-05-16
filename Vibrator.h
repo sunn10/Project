@@ -13,7 +13,8 @@ private:
 	int duration;
 	int pwmRange;
 public:
-	Vibrator(int p);
+	Vibrator(){};
+	void setpin(int p);
 	void setDuration(int dur);
 };
 

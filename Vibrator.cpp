@@ -1,9 +1,10 @@
 #include "Vibrator.h"
 using namespace std;
 
-Vibrator::Vibrator(int p){
+void Vibrator::setpin(int p){
 	pin=p;
 	duration = 0;
+	pwmRange=1000;
 	softPwmCreate (pin, 0,  pwmRange);
 }
 

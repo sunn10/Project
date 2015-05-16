@@ -1,7 +1,7 @@
 #include "Switcher.h"
 using namespace std;
 
-Switcher::Switcher(int pin1, int pin2, int pin3){
+void Switcher::setpin(int pin1, int pin2, int pin3){
 	a = pin1;
 	b = pin2;
 	c = pin3;
