@@ -54,7 +54,7 @@ int main(void) {
 			switcher.switchpin(i);
 			
 			delay(5);
-			if(i<4){
+			if(i<5){
 //				cout<<i<<"-"<<sensor[i].getdistance()<<endl;
 				delay(1);
 			}
