@@ -61,7 +61,7 @@ int main(void) {
 	while (1){
 
 		
-		for(int i=4;i<6i++){
+		for(int i=4;i<6;i++){
 			switcher.switchpin(i);
 			delay(100);
 			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
