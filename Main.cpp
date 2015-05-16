@@ -61,16 +61,16 @@ int main(void) {
 			if(i<5){
 				precise = sensor[i].getdistance();
 				cout<<i<<"-"<<precise<<endl;
-				if(i==0){
-					if (precise <= 150 && precise > 100)
-						vibrator[0].setDuration(100);
-					else if (precise <= 100 && precise > 50)
-						vibrator[0].setDuration(200);
-					else if (precise <= 50 && precise > 25)
-						vibrator[0].setDuration(500);
-					else if (precise <= 25)
-						vibrator[0].setDuration(700);
-				} 
+//				if(i==0){
+//					if (precise <= 150 && precise > 100)
+//						vibrator[0].setDuration(100);
+//					else if (precise <= 100 && precise > 50)
+//						vibrator[0].setDuration(200);
+//					else if (precise <= 50 && precise > 25)
+//						vibrator[0].setDuration(500);
+//					else if (precise <= 25)
+//						vibrator[0].setDuration(700);
+//				} 
 				delay(1);
 			}
 			else{
