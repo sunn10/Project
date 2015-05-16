@@ -60,6 +60,7 @@ int main(void) {
 			}
 			else{
 				cout<<i<<"-"<calibrate.getwarn()<<endl;
+			}
 	//		delay(500);
 	//		digitalWrite(TRIG1, HIGH);
 	//		delay(500);
