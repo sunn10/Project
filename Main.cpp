@@ -50,7 +50,7 @@ int main(void) {
 	//	printf("Start\n");
 	setup();
 //	float distance[6];
-//	double precise = 0;
+	double precise = 0;
 //	double data = 0;
 	while (1){
 		
@@ -59,7 +59,18 @@ int main(void) {
 			
 			delay(5);
 			if(i<5){
-				cout<<i<<"-"<<sensor[i].getdistance()<<endl;
+				precise = sensor[i].getdistance()
+				cout<<i<<"-"<<<<endl;
+				if(i==0){
+					if (precise <= 150 && precise > 100)
+						vibrator[0].setDuration(100);
+					else if (precise <= 100 && precise > 50)
+						vibrator[0].setDuration(200);
+					else if (precise <= 50 && precise > 25)
+						vibrator[0].setDuration(500);
+					else if (precise <= 25)
+						vibrator[0].setDuration(700);
+				} 
 				delay(1);
 			}
 			else{
