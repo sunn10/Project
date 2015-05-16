@@ -66,9 +66,9 @@ int main(void) {
 //			delay(100);
 //			cout<<0<<"-"<<sensor[0].getdistance()<<endl;
 //
-//			delay(100);
+		delay(500);
 		digitalWrite(TRIG1, HIGH);
-//		delay(100);
+		delay(500);
 		digitalWrite(TRIG1, LOW);
 		}
 //		cout<<2<<"-"<<sensor[2].getdistance()<<endl;
