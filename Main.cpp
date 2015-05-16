@@ -13,7 +13,7 @@ using namespace std;
 
 int duration = 0;
 //float ave_data[6];
-Sensor sensor[6];
+Sensor *sensor[6];
 Switcher switcher;
 Vibrator vibrator[3];
 
@@ -22,13 +22,10 @@ void setup() {
 	pinMode(ECHO1, INPUT);
 	pinMode(TRIG1, OUTPUT);
 	digitalWrite(TRIG1, LOW);
-	sensor[0].setpin(TRIG1,ECHO1);
-	sensor[1].setpin(TRIG1,ECHO1);
-	sensor[2].setpin(TRIG1,ECHO1);
-	sensor[3].setpin(TRIG1,ECHO1);
-	sensor[4].setpin(TRIG1,ECHO1);
-	sensor[5].setpin(TRIG1,ECHO1);
-
+	sensor = new Sensor[6];
+	for(int i=0;i<6;i++){
+		sensor[i].setpin(TRIG1,ECHO1);
+	}
 	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
 	switcher.switchpin(5);
@@ -81,6 +78,10 @@ int main(void) {
 //			vibrator[0].setDuration(500);
 //		else if (precise <= 25)
 //			vibrator[0].setDuration(700); 
+	}
+		for(int i=0;i<6;i++){
+		delete sensor[i];
+	
 	}
 	return 0;
 }
