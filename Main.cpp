@@ -61,10 +61,11 @@ int main(void) {
 	while (1){
 
 		
-		for(int i=0;i<6;i++){
-			switcher.switchpin(0);
+		for(int i=0;i<2;i++){
+			switcher.switchpin(i);
 			delay(100);
-			cout<<0<<"-"<<sensor[0].getdistance()<<endl;
+			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
+			delay(100);
 //
 //		delay(500);
 //		digitalWrite(TRIG1, HIGH);
