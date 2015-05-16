@@ -59,17 +59,18 @@ int main(void) {
 //	double precise = 0;
 //	double data = 0;
 	while (1){
+
+		
+		for(int i=0;i<6;i++){
+			switcher.switchpin(i);
+//			delay(100);
+//			cout<<0<<"-"<<sensor[0].getdistance()<<endl;
+//
+//			delay(100);
 		digitalWrite(TRIG1, HIGH);
 //		delay(100);
-//		digitalWrite(TRIG1, LOW);
-		
-//		for(int i=0;i<6;i++){
-			switcher.switchpin(0);
-			delay(100);
-			cout<<0<<"-"<<sensor[0].getdistance()<<endl;
-
-			delay(100);
-//		}
+		digitalWrite(TRIG1, LOW);
+		}
 //		cout<<2<<"-"<<sensor[2].getdistance()<<endl;
 //		if (precise <= 150 && precise > 100)
 //			vibrator[0].setDuration(100);
