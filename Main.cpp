@@ -34,7 +34,7 @@ void setup() {
 		sensor[i].setpin(TRIG1,ECHO1);
 	}
 	
-	vibrator[0].setpin(VIB);
+//	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
 	switcher.switchpin(5);
 	calibrate.setup();
@@ -59,7 +59,7 @@ int main(void) {
 			
 			delay(5);
 			if(i<5){
-				precise = sensor[i].getdistance()
+				precise = sensor[i].getdistance();
 				cout<<i<<"-"<<<<endl;
 				if(i==0){
 					if (precise <= 150 && precise > 100)
