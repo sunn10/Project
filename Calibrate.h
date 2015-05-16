@@ -12,6 +12,7 @@ class Calibrate:public Sensor{
 private:
 	double save_precise;
 	double detect_distance;
+	
 	double dif_distance(double precise);
 public:
 	Calibrate(){};
