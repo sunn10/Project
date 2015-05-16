@@ -62,14 +62,14 @@ int main(void) {
 
 		
 		for(int i=0;i<6;i++){
-			switcher.switchpin(i);
-//			delay(100);
-//			cout<<0<<"-"<<sensor[0].getdistance()<<endl;
+			switcher.switchpin(0);
+			delay(100);
+			cout<<0<<"-"<<sensor[0].getdistance()<<endl;
 //
-		delay(500);
-		digitalWrite(TRIG1, HIGH);
-		delay(500);
-		digitalWrite(TRIG1, LOW);
+//		delay(500);
+//		digitalWrite(TRIG1, HIGH);
+//		delay(500);
+//		digitalWrite(TRIG1, LOW);
 		}
 //		cout<<2<<"-"<<sensor[2].getdistance()<<endl;
 //		if (precise <= 150 && precise > 100)
