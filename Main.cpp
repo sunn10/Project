@@ -24,7 +24,7 @@ void setup() {
 	digitalWrite(TRIG1, LOW);
 	sensor = new Sensor[6];
 	for(int i=0;i<6;i++){
-		sensor[i].setpin(TRIG1,ECHO1);
+		sensor[i]->setpin(TRIG1,ECHO1);
 	}
 	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
@@ -34,19 +34,6 @@ void setup() {
 //	digitalWrite(TRIG1, LOW);
 
 	delay(10);
-}
-
-void switch_c(int num){
-	while (num < 6){
-		switch (num){
-		case 0:
-//			ave_data[0] = sensor[0].getdistance();
-			break;
-
-		default:
-			break;
-		}
-	}
 }
 
 int main(void) {
@@ -61,7 +48,7 @@ int main(void) {
 		for(int i=0;i<6;i++){
 			switcher.switchpin(i);
 			delay(5);
-			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
+			cout<<i<<"-"<<sensor[i]->getdistance()<<endl;
 			delay(1);
 //
 //		delay(500);
@@ -79,9 +66,8 @@ int main(void) {
 //		else if (precise <= 25)
 //			vibrator[0].setDuration(700); 
 	}
-		for(int i=0;i<6;i++){
-		delete sensor[i];
-	
-	}
+
+		delete sensor;
+
 	return 0;
 }
