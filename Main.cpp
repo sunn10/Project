@@ -7,10 +7,13 @@ using namespace std;
 #define TRUE 1
 #define TRIG1 2
 #define ECHO1 3
-#define VIB 7
+
 #define A 4
 #define B 5
-#define C 6
+#define C 7
+#define VIB1 12
+#define VIB2 13
+#define VIB3 14
 
 int duration = 0;
 //float ave_data[6];
@@ -35,11 +38,12 @@ void setup() {
 	switcher.setpin(A,B,C);
 	switcher.switchpin(5);
 	calibrate.setup();
-//	sensor[0].printpin();
-//	vibrator = Vibrator(VIB); 
+	vibrator[0].setpin(VIB1);
+	vibrator[1].setpin(VIB2);
+	vibrator[2].setpin(VIB3); 
 //	digitalWrite(TRIG1, LOW);
 
-	delay(10);
+	delay(5);
 }
 
 int main(void) {
@@ -55,7 +59,7 @@ int main(void) {
 			
 			delay(5);
 			if(i<5){
-//				cout<<i<<"-"<<sensor[i].getdistance()<<endl;
+				cout<<i<<"-"<<sensor[i].getdistance()<<endl;
 				delay(1);
 			}
 			else{
