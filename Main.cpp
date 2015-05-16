@@ -63,9 +63,9 @@ int main(void) {
 		
 		for(int i=0;i<6;i++){
 			switcher.switchpin(i);
-			delay(100);
+			delay(5);
 			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
-			delay(100);
+			delay(1);
 //
 //		delay(500);
 //		digitalWrite(TRIG1, HIGH);
