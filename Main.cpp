@@ -1,6 +1,7 @@
 #include "Sensor.h"
 #include "Vibrator.h"
 #include "Switcher.h"
+#include "Calibrate.h"
 using namespace std;
 
 #define TRUE 1
@@ -22,9 +23,10 @@ void setup() {
 	pinMode(ECHO1, INPUT);
 	pinMode(TRIG1, OUTPUT);
 	digitalWrite(TRIG1, LOW);
-	sensor = new Sensor[6];
+	sensor = new Sensor[5];
+	sensor[5] = new Calibrate;
 	for(int i=0;i<6;i++){
-		sensor[i]->setpin(TRIG1,ECHO1);
+		sensor[i].setpin(TRIG1,ECHO1);
 	}
 	vibrator[0].setpin(VIB);
 	switcher.setpin(A,B,C);
@@ -45,10 +47,10 @@ int main(void) {
 	while (1){
 
 		
-		for(int i=0;i<6;i++){
+		for(int i=0;i<5;i++){
 			switcher.switchpin(i);
 			delay(5);
-			cout<<i<<"-"<<sensor[i]->getdistance()<<endl;
+			cout<<i<<"-"<<sensor[i].getdistance()<<endl;
 			delay(1);
 //
 //		delay(500);
@@ -66,9 +68,8 @@ int main(void) {
 //		else if (precise <= 25)
 //			vibrator[0].setDuration(700); 
 	}
-		for(int i=0;i<6;i++){
-		delete sensor[i];
-	
-	}
+
+		delete[] sensor;
+
 	return 0;
 }
