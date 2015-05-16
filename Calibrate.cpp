@@ -9,7 +9,10 @@ double Calibrate :: dif_distance(double precise){
 }
 
 int Calibrate :: getwarn(){
-	 if(dif_distance(getdistance())<10){
+	double dis = getdistance();
+	double difdis = dif_distance(dis);
+	cout<<difdis<<endl;
+	 if(difdis<10){
 		 return 0;
 	 }
 	 else return 1;
