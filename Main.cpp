@@ -95,9 +95,14 @@ void warning(int i){
 
 int outOfDanger(double distance){
 	if(distance < 30 && !inDanger){
-		
+		inDanger = true;
+		return 1;
 	}
 	else (inDanger)
+	{
+		inDanger = false;
+		return 0;
+	}
 }
 
 int main(void) {
