@@ -91,7 +91,7 @@ int main(void) {
 			delay(5);
 			if(i<5){
 				cout<<i<<"-"<<precise<<endl;
-				switch i{
+				switch (i){
 					case 0:
 						setVibDuration(sensor[i].getdistance(),0);
 						break;
