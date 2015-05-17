@@ -16,7 +16,7 @@ public:
 	Vibrator(){};
 	void setpin(int p);
 	void setDuration(int dur);
-	void getDuration();
+	int getDuration();
 };
 
 #endif
