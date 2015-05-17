@@ -66,10 +66,26 @@ void warning(int i){
 	vibrator[2].setDuration(0);
 	delay(100);
 	if(i<0){
-		
+		vibrator[0].setDuration(500);
+		delay(1000);
+		vibrator[0].setDuration(0);
+		vibrator[1].setDuration(500);
+		delay(1000);
+		vibrator[1].setDuration(0);
+		vibrator[2].setDuration(500);
+		delay(1000);
+		vibrator[2].setDuration(0);
 	}
 	else{
-		
+		vibrator[2].setDuration(500);
+		delay(1000);
+		vibrator[2].setDuration(0);
+		vibrator[1].setDuration(500);
+		delay(1000);
+		vibrator[1].setDuration(0);
+		vibrator[0].setDuration(500);
+		delay(1000);
+		vibrator[0].setDuration(0);
 	}
 	vibrator[0].setDuration(d1);
 	vibrator[1].setDuration(d2);
