@@ -54,8 +54,8 @@ void setVibDuration(double precise,int i){
 		vibrator[i].setDuration(5000);
 	else if (precise <= 25)
 		vibrator[i].setDuration(7000);
-	}
 }
+
 
 void warning(int i){
 	int d1 = vibrator[0].getDuration();
