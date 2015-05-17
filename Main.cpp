@@ -45,12 +45,43 @@ void setup() {
 
 	delay(5);
 }
+void setVibDuration(double precise,int i){
+	if (precise <= 150 && precise > 100)
+		vibrator[i].setDuration(1000);
+	else if (precise <= 100 && precise > 50)
+		vibrator[i].setDuration(2000);
+	else if (precise <= 50 && precise > 25)
+		vibrator[i].setDuration(5000);
+	else if (precise <= 25)
+		vibrator[i].setDuration(7000);
+	}
+}
+
+void warning(int i){
+	int d1 = vibrator[0].getDuration();
+	int d2 = vibrator[1].getDuration();
+	int d3 = vibrator[2].getDuration();
+	vibrator[0].setDuration(0);
+	vibrator[1].setDuration(0);
+	vibrator[2].setDuration(0);
+	delay(100);
+	if(i<0){
+		
+	}
+	else{
+		
+	}
+	vibrator[0].setDuration(d1);
+	vibrator[1].setDuration(d2);
+	vibrator[2].setDuration(d3);
+}
 
 int main(void) {
 	//	printf("Start\n");
 	setup();
 //	float distance[6];
-	double precise = 0;
+	double precise1 = 0;
+	double precise2 = 0;
 //	double data = 0;
 	while (1){
 		
@@ -59,18 +90,22 @@ int main(void) {
 			
 			delay(5);
 			if(i<5){
-				precise = sensor[i].getdistance();
 				cout<<i<<"-"<<precise<<endl;
-				if(i==0){
-					if (precise <= 150 && precise > 100)
-						vibrator[0].setDuration(1000);
-					else if (precise <= 100 && precise > 50)
-						vibrator[0].setDuration(2000);
-					else if (precise <= 50 && precise > 25)
-						vibrator[0].setDuration(5000);
-					else if (precise <= 25)
-						vibrator[0].setDuration(7000);
-				} 
+				switch i{
+					case 0:
+						setVibDuration(sensor[i].getdistance(),0);
+						break;
+					case 1:
+						precise1 = sensor[i].getdistance();
+						break;
+					case 2:
+						break;
+					case 3:
+						setVibDuration(sensor[i].getdistance(),2);
+						break;
+					case 4:
+						break;
+				}							
 				delay(1);
 			}
 			else{

@@ -15,3 +15,7 @@ void Vibrator::setDuration(int dur){
 		softPwmWrite (pin, duration) ;
 	}
 }
+
+int Vibrator::getDuration(){
+	return duration;	
+}
