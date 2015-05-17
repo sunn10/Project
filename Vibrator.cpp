@@ -4,7 +4,7 @@ using namespace std;
 void Vibrator::setpin(int p){
 	pin=p;
 	duration = 0;
-	pwmRange=1000;
+	pwmRange=10000;
 	softPwmCreate (pin, duration,  pwmRange);
 	softPwmWrite (pin, duration) ;
 }

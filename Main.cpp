@@ -63,13 +63,13 @@ int main(void) {
 				cout<<i<<"-"<<precise<<endl;
 				if(i==0){
 					if (precise <= 150 && precise > 100)
-						vibrator[0].setDuration(100);
+						vibrator[0].setDuration(1000);
 					else if (precise <= 100 && precise > 50)
-						vibrator[0].setDuration(200);
+						vibrator[0].setDuration(2000);
 					else if (precise <= 50 && precise > 25)
-						vibrator[0].setDuration(500);
+						vibrator[0].setDuration(5000);
 					else if (precise <= 25)
-						vibrator[0].setDuration(700);
+						vibrator[0].setDuration(7000);
 				} 
 				delay(1);
 			}
