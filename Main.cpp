@@ -93,7 +93,7 @@ void warning(int i){
 	vibrator[2].setDuration(d3);
 }
 
-int outOfDanger(double distance){
+int outOfDanger(double distance) {
 	if(distance < 30 && !inDanger){
 		inDanger = true;
 		return 1;
