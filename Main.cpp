@@ -98,7 +98,7 @@ int outOfDanger(double distance) {
 		inDanger = true;
 		return 1;
 	}
-	else (inDanger)
+	else if (inDanger)
 	{
 		inDanger = false;
 		return 0;
