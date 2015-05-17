@@ -15,6 +15,7 @@ using namespace std;
 #define VIB2 13
 #define VIB3 14
 
+bool inDanger=false;
 int duration = 0;
 //float ave_data[6];
 Sensor *sensor;
@@ -92,6 +93,13 @@ void warning(int i){
 	vibrator[2].setDuration(d3);
 }
 
+int outOfDanger(double distance){
+	if(distance < 30 && !inDanger){
+		
+	}
+	else (inDanger)
+}
+
 int main(void) {
 	//	printf("Start\n");
 	setup();
@@ -106,7 +114,7 @@ int main(void) {
 			
 			delay(5);
 			if(i<5){
-				cout<<i<<"-"<<precise<<endl;
+//				cout<<i<<"-"<<precise<<endl;
 				switch (i){
 					case 0:
 						setVibDuration(sensor[i].getdistance(),0);
@@ -115,11 +123,14 @@ int main(void) {
 						precise1 = sensor[i].getdistance();
 						break;
 					case 2:
+						precise2 = sensor[i].getdistance();
+						setVibDuration((precise1+precise2)/2,1);
 						break;
 					case 3:
 						setVibDuration(sensor[i].getdistance(),2);
 						break;
 					case 4:
+						//beep
 						break;
 				}							
 				delay(1);
